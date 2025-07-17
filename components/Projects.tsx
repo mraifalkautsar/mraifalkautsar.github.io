@@ -1,10 +1,10 @@
 "use client"
 
-import { Shield } from "lucide-react"
+import { FolderOpen } from "lucide-react"
 import Image from "next/image"
 import { projects } from "@/data/projects"
 import type { Project } from "@/types"
-import { getSkillIcon, getSkillCategory, getSkillColors, getRarityColor } from "@/utils/skillHelpers"
+import { getSkillIcon, getSkillCategory, getSkillColors } from "@/utils/skillHelpers"
 
 interface ProjectInventoryProps {
   onProjectSelect: (project: Project) => void
@@ -12,70 +12,59 @@ interface ProjectInventoryProps {
 
 export default function ProjectInventory({ onProjectSelect }: ProjectInventoryProps) {
   return (
-    <section id="projects" className="py-12 px-4">
+    <section id="projects" className="py-16 px-4 bg-white dark:bg-gray-900">
       <div className="container mx-auto">
-        <div className="max-w-7xl mx-auto">
-          <div
-            className="bg-slate-800/90 border-4 border-blue-500/60 rounded-lg p-6"
-            style={{
-              boxShadow: "inset 0 2px 4px rgba(0,0,0,0.4), 0 4px 16px rgba(0,0,0,0.6)",
-            }}
-          >
-            <h2 className="text-2xl font-bold text-blue-300 text-center mb-6 flex items-center justify-center">
-              <Shield className="h-6 w-6 mr-2" />
-              PROJECTS
-            </h2>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
+            <p className="text-gray-600 dark:text-gray-400">A showcase of my recent work and contributions</p>
+          </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {projects.map((project) => (
-                <div
-                  key={project.id}
-                  onClick={() => onProjectSelect(project)}
-                  className={`cursor-pointer bg-slate-700/70 border-2 ${getRarityColor(project.rarity)} rounded-lg p-4 hover:bg-slate-600/80 transition-all duration-200 hover:scale-105`}
-                  style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.4), 0 2px 12px rgba(0,0,0,0.3)" }}
-                >
-                  <div className="relative mb-3">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={200}
-                      height={120}
-                      className="w-full h-24 object-cover rounded border border-blue-400/40"
-                    />
-                    <div
-                      className={`absolute top-1 right-1 px-2 py-1 rounded text-xs font-bold ${getRarityColor(project.rarity)} bg-slate-900/90`}
-                    >
-                      {project.rarity}
-                    </div>
-                  </div>
-
-                  <h3 className="text-purple-300 font-bold text-sm mb-2 flex items-center">
-                    <Shield className="h-3 w-3 mr-1" />
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-200 text-xs mb-3 leading-relaxed">{project.description}</p>
-
-                  <div className="flex flex-wrap gap-1">
-                    {project.technologies.slice(0, 3).map((tech, index) => {
-                      const IconComponent = getSkillIcon(tech)
-                      const category = getSkillCategory(tech)
-                      return (
-                        <div
-                          key={index}
-                          className={`flex items-center space-x-1 px-2 py-1 rounded text-xs ${getSkillColors(category)}`}
-                        >
-                          <IconComponent className="h-3 w-3" />
-                          <span>{tech}</span>
-                        </div>
-                      )
-                    })}
-                    {project.technologies.length > 3 && (
-                      <span className="px-1 py-0.5 text-xs text-blue-200">+{project.technologies.length - 3}</span>
-                    )}
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                onClick={() => onProjectSelect(project)}
+                className="cursor-pointer bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+              >
+                <div className="relative mb-4">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={300}
+                    height={180}
+                    className="w-full h-32 object-cover rounded-lg border border-gray-100 dark:border-gray-700"
+                  />
                 </div>
-              ))}
-            </div>
+
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+                  <FolderOpen className="h-4 w-4 mr-2 text-gray-500 dark:text-gray-400" />
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.slice(0, 3).map((tech, index) => {
+                    const IconComponent = getSkillIcon(tech)
+                    const category = getSkillCategory(tech)
+                    return (
+                      <div
+                        key={index}
+                        className={`flex items-center space-x-1 px-2 py-1 rounded-lg border text-xs ${getSkillColors(category)}`}
+                      >
+                        <IconComponent className="h-3 w-3" />
+                        <span>{tech}</span>
+                      </div>
+                    )
+                  })}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 text-xs text-gray-500 dark:text-gray-400">
+                      +{project.technologies.length - 3} more
+                    </span>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

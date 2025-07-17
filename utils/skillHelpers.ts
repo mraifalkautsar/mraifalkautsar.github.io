@@ -8,33 +8,25 @@ export const getSkillIcon = (skillName: string) => {
 
 export const getSkillCategory = (skillName: string) => {
   const skill = skills.find((s) => s.name === skillName)
-  return skill?.category || "other"
+  return skill?.category || "tools"
 }
 
 export const getSkillColors = (category: string) => {
   switch (category) {
     case "languages":
-      return "bg-blue-900/80 border-blue-400/70 text-blue-100 hover:bg-blue-800/90"
+      return "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-200"
     case "frameworks":
-      return "bg-purple-900/80 border-purple-400/70 text-purple-100 hover:bg-purple-800/90"
+      return "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800 text-green-800 dark:text-green-200"
     case "databases":
-      return "bg-indigo-900/80 border-indigo-400/70 text-indigo-100 hover:bg-indigo-800/90"
+      return "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800 text-purple-800 dark:text-purple-200"
     case "tools":
-      return "bg-cyan-900/80 border-cyan-400/70 text-cyan-100 hover:bg-cyan-800/90"
+      return "bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800 text-orange-800 dark:text-orange-200"
     default:
-      return "bg-slate-700/80 border-slate-400/70 text-slate-100 hover:bg-slate-600/90"
+      return "bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-800 dark:text-gray-200"
   }
 }
 
 export const getRarityColor = (rarity: string) => {
-  switch (rarity) {
-    case "Assignment":
-      return "text-yellow-300 border-yellow-500/80"
-    case "Club/Work":
-      return "text-purple-300 border-purple-500/80"
-    case "Personal":
-      return "text-[#77c9d4] border-[#32745c]"
-    default:
-      return "text-slate-300 border-slate-500/80"
-  }
+  // Simplified for professional look - all projects get same styling
+  return "text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700"
 }

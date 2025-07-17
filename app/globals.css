@@ -130,44 +130,6 @@
     @apply scroll-smooth;
   }
   
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Poppins', 'Courier New', monospace;
-    cursor: url('/cursor/NORMAL.cur'), auto;
-  }
-
-  /* Interactive elements like buttons and links */
-  button, a, [role="button"] {
-    cursor: url('/cursor/LINK_SELECT.cur'), pointer;
-  }
-
-  /* Hover states for interactive elements */
-  button:hover, a:hover, [role="button"]:hover {
-    cursor: url('/cursor/LINK_SELECT.cur'), pointer;
-  }
-
-  /* Input fields */
-  input, textarea {
-    cursor: url('/cursor/TEXT_SELECT.cur'), text;
-  }
-
-  /* Additional interactive elements that should use LINK_SELECT */
-  .cursor-pointer, [onclick], [data-clickable], 
-  [role="button"], .project-card, 
-  div[onclick] {
-    cursor: url('/cursor/LINK_SELECT.cur'), pointer;
-  }
-
-  /* Specifically target any clickable divs */
-  div[role="button"], 
-  div.cursor-pointer,
-  .clickable {
-    cursor: url('/cursor/LINK_SELECT.cur'), pointer;
-  }
-
-  h1, h2 {
-    font-family: 'VCR OSD Mono', 'Courier New', monospace;
-  }
 }
 
 @layer utilities {
