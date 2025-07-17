@@ -95,21 +95,10 @@ export default function CharacterSheet() {
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
                 <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
                   <p>
-                    I am a passionate <strong>3rd-year Computer Science student</strong> at{" "}
-                    <strong>Institut Teknologi Bandung (ITB)</strong> with diverse interests spanning{" "}
-                    <strong>software engineering</strong>, <strong>cybersecurity</strong>, and{" "}
-                    <strong>game development</strong>.
-                  </p>
-                  <p>
-                    I actively participate in <strong>capture-the-flag competitions</strong>, viewing them as engaging
-                    puzzles that sharpen my problem-solving skills. Through my involvement in clubs like GIM ITB and
-                    Genshiken ITB, I continuously strive for academic excellence while building practical programming
-                    experience.
-                  </p>
-                  <p>
-                    My goal is to leverage these diverse interests and experiences to build a strong foundation as a{" "}
-                    <strong>software engineer</strong>, always eager to learn new technologies and tackle challenging
-                    problems.
+                    My name is Ra'if, a passionate third-year computer science student. I have quite an interest in game development as a <i>side-quest</i> in my journey. 
+                    <b> Cybersecurity</b> and <b>web development</b> is also a great interest to me. I love solving problems and learning new things. I am quite active in my clubs: GIM ITB and Genshiken ITB, and constantly strives to be better academically
+                    taking on assignments as stepping stones to make me better at programming. I do <b>capture-the-flag</b> competitions, seeing them as interesting puzzles to solve.
+                    These interests of mine help me build a strong foundation as a <b>software engineer</b>.
                   </p>
                 </div>
               </div>
