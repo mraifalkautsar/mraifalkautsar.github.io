@@ -82,8 +82,8 @@ export default function CharacterSheet() {
                 <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8 max-w-4xl">
                   <p>
                     3rd-year Computer Science student with passion for{" "}
-                    <strong className="text-white">software engineering</strong> and{" "}
-                    <strong className="text-white">game development</strong>. <br></br> 
+                    <strong className="text-black dark:text-white">software engineering</strong>. {" "}
+                    Pursues <strong className="text-black dark:text-white"> game development</strong> as a hobby. <br></br> 
                     Building a strong foundation through hands-on projects and continuous learning.
                   </p>
                 </div>
@@ -109,9 +109,14 @@ export default function CharacterSheet() {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-medium rounded-lg">
-                    <Download className="h-5 w-5 mr-2" />
-                    Download CV
+                  <Button 
+                    asChild
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-medium rounded-lg"
+                  >
+                    <a href="/CV - Muhammad Ra'if Alkautsar.pdf" download rel="noopener noreferrer">
+                      <Download className="h-5 w-5 mr-2" />
+                      Download CV
+                    </a>
                   </Button>
                   <Button
                     variant="outline"
