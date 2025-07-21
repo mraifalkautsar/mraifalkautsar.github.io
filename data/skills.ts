@@ -40,5 +40,4 @@ export const skills: Skill[] = [
   { name: "Git", icon: GitBranch, category: "tools" },
   { name: "Figma", icon: Palette, category: "tools" },
   { name: "Photoshop", icon: Image, category: "tools" },
-  { name: "Camtasia", icon: Video, category: "tools" },
 ]

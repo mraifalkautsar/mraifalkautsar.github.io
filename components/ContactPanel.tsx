@@ -12,16 +12,24 @@ export default function ContactPanel() {
               I'm always interested in new opportunities and exciting projects. <br></br>Feel free to reach out!
             </p>
             <div className="flex justify-center space-x-4">
-              <Button className="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg shadow-sm">
-                <Mail className="h-4 w-4 mr-2" />
-                Send Email
+              <Button 
+                asChild
+                className="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-lg shadow-sm"
+              >
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=mraifalkautsar@gmail.com" target="_blank" rel="noopener noreferrer">
+                  <Mail className="h-4 w-4 mr-2" />
+                  Send Email
+                </a>
               </Button>
               <Button
                 variant="outline"
+                asChild
                 className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg bg-transparent"
               >
-                <Linkedin className="h-4 w-4 mr-2" />
-                Connect on LinkedIn
+                <a href="https://www.linkedin.com/in/mraifalkautsar/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="h-4 w-4 mr-2" />
+                  Connect on LinkedIn
+                </a>
               </Button>
             </div>
           </div>
