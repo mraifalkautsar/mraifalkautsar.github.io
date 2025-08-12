@@ -17,7 +17,7 @@ export default function ProjectInventory({ onProjectSelect }: ProjectInventoryPr
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Projects</h2>
-            <p className="text-gray-600 dark:text-gray-400">A showcase of my recent work and contributions</p>
+            <p className="text-gray-600 dark:text-gray-400">A showcase of my works and contributions</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
