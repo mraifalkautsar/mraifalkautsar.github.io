@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
     company: "Pena",
     location: "Bandung, Indonesia",
     duration: "2025 - Present",
-    description: "Write documentation of technologies from various companies across the globe. Perform migrations of documentation. Build front-end components.",
+    description: "Write documentation of technologies from various companies across the globe. Perform migrations of documentation. Is currently developing Fumadocs Cloud, the premium version of the popular open source framework Fumadocs. ",
     technologies: ["Markdown", "HTML", "CSS", "JavaScript"],
     level: 90,
   },
