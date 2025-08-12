@@ -72,7 +72,7 @@ export default function CharacterSheet() {
                 </h1>
 
                 <h2 className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-4 font-medium">
-                  Software Engineer | Programmer
+                  Software Engineer
                 </h2>
 
                 <p className="text-lg text-gray-500 dark:text-gray-400 mb-6">
@@ -81,10 +81,8 @@ export default function CharacterSheet() {
 
                 <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8 max-w-4xl">
                   <p>
-                    3rd-year Computer Science student with passion for{" "}
-                    <strong className="text-black dark:text-white">software engineering</strong>. {" "}
-                    Pursues <strong className="text-black dark:text-white"> game development</strong> as a hobby. <br></br> 
-                    Building a strong foundation through hands-on projects and continuous learning.
+                    Just a 3rd-year Computer Science student with passion for{" "}
+                    <strong className="text-black dark:text-white">software engineering</strong> with a hobby of <strong className="text-black dark:text-white"> game development</strong>.
                   </p>
                 </div>
 
